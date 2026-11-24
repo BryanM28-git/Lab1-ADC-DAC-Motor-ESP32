@@ -114,10 +114,10 @@ En esta práctica hay **dos comunicaciones muy distintas**, y el modelo OSI ayud
 | Etapa | Ecuación | Resultado |
 |---|---|---|
 | Encoder (20 ranuras) | $f=\dfrac{\text{RPM}\cdot 20}{60}$ | 3000 RPM → **1 kHz** |
-| LM331 | $V_{out}=f\cdot 2.09\,\dfrac{R_L}{R_S}R_tC_t$ | **3.344 V** a 1 kHz |
+| LM331 | $V_{out}=f\cdot 2.09\cdot\dfrac{R_L}{R_S}R_tC_t$ | **3.344 V** a 1 kHz |
 | Monoestable | $t_1=1.1R_tC_t$ | 74.8 µs < 1 ms ✔ |
 | Rizado / respuesta | $\Delta V\approx\dfrac{1.9}{R_S}\dfrac{t_1}{C_L}$ · $\tau=R_LC_L$ | 33 mV · 0.5 s |
-| ADC → RPM | $\text{RPM}=N\cdot\dfrac{3.3}{4095}\cdot\dfrac{60}{20\,K}$ | 0.72 RPM/cuenta |
+| ADC → RPM | $\text{RPM}=N\cdot\dfrac{3.3}{4095}\cdot\dfrac{60}{20K}$ | 0.72 RPM/cuenta |
 | RPM → PWM | $d=\lfloor \text{RPM}/3000\cdot 1023\rfloor$ | 2.93 RPM/paso |
 | Potencia | $P=V_m I$ · $P_{bloq}=V_m^2/R_a$ | 13.2 W · pico 36 W |
 
